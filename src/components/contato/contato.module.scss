@@ -1,0 +1,94 @@
+@import "/src/styles/mixins/colors.scss";
+@import "/src/styles/mixins/padding.scss";
+@import "/src/styles/mixins/responsive.scss";
+@import "/src/styles/mixins/fonts.scss";
+
+.container {
+  @include Padding;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px 3rem;
+  background-image: url("/images/fundoWelcome.svg");
+  background-repeat: no-repeat;
+  background-size: cover; //rever
+  margin-bottom: 10rem;
+
+  @include Phone {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  @include Tablet {
+    margin-bottom: 4rem;
+  }
+}
+
+.texts {
+  span {
+    @include SizeNormal;
+    font-weight: 600;
+    color: $green2-color;
+  }
+
+  h1 {
+    @include SizeLarge;
+    font-weight: bold;
+  }
+
+  p {
+    @include SizeNormal;
+    font-weight: 300;
+    opacity: 0.7;
+  }
+}
+
+.form {
+  padding: 38px 31px;
+  background-color: $white-color;
+  border: 0.5px solid $gray3-color;
+  border-radius: 10px;
+
+  h1 {
+    color: $purple-color;
+    font-weight: bold;
+    @include SizeMedium;
+  }
+
+  form {
+    display: grid;
+    gap: 23px;
+  }
+
+  @include Phone {
+    padding: 1rem;
+
+    form {
+      gap: 1rem;
+    }
+  }
+}
+
+.footer {
+  @include SizeSmall;
+  padding: 0 6rem;
+  grid-column-start: 2;
+  text-align: center;
+  line-height: 2rem;
+  color: $gray-color;
+
+  span {
+    color: $white-color;
+    cursor: pointer;
+  }
+
+  @include Phone {
+    grid-column-start: 1;
+    padding: 0 1rem;
+  }
+
+  @include Tablet {
+    padding: 0 1rem;
+  }
+}

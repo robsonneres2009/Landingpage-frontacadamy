@@ -1,0 +1,19 @@
+@import "./mixins/colors.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: $purple-color;
+  color: $white-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

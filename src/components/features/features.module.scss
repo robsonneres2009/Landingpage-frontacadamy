@@ -1,0 +1,98 @@
+@import "/src/styles/mixins/colors.scss";
+@import "/src/styles/mixins/padding.scss";
+@import "/src/styles/mixins/fonts.scss";
+@import "/src/styles/mixins/responsive.scss";
+
+.container {
+  @include Padding;
+  padding-bottom: 255px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    @include SizeLarge;
+    font-weight: bold;
+  }
+
+  p {
+    @include SizeNormal;
+    opacity: 0.7;
+    margin-bottom: 8rem;
+  }
+
+  h1,
+  p {
+    text-align: center;
+    width: 900px;
+  }
+
+  @include Phone {
+    padding-bottom: 6rem;
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    h1,
+    p {
+      width: 100%;
+    }
+  }
+
+  @include Tablet {
+    padding-bottom: 6rem;
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    h1,
+    p {
+      width: 100%;
+    }
+  }
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 68px;
+
+  @include Phone {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.feature {
+  max-width: 509px;
+  max-height: 347px;
+  width: 100%;
+  height: 100%;
+  padding: 32px 35px;
+  background-color: $white-color;
+  border-radius: 5px;
+
+  h1 {
+    @include SizeMedium;
+    font-weight: bold;
+    color: $purple2-color;
+    width: auto;
+    text-align: left;
+  }
+
+  p {
+    @include SizeSmall;
+    color: $gray2-color;
+    width: auto;
+    text-align: left;
+  }
+
+  @include Phone {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  }
+}

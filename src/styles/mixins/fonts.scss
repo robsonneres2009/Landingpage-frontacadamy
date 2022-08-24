@@ -1,0 +1,81 @@
+@import "./responsive.scss";
+
+@mixin SizeExtra {
+  font-size: 71px;
+
+  @include Phone {
+    font-size: 35px;
+  }
+
+  @include Tablet {
+    font-size: 50px;
+  }
+
+  @include Laptop {
+    font-size: 55px;
+  }
+}
+
+@mixin SizeLarge {
+  font-size: 65px;
+
+  @include Phone {
+    font-size: 32px;
+  }
+
+  @include Tablet {
+    font-size: 45px;
+  }
+
+  @include Laptop {
+    font-size: 50px;
+  }
+}
+
+@mixin SizeMedium {
+  font-size: 41px;
+
+  @include Phone {
+    font-size: 22px;
+  }
+
+  @include Tablet {
+    font-size: 28px;
+  }
+
+  @include Laptop {
+    font-size: 35px;
+  }
+}
+
+@mixin SizeNormal {
+  font-size: 30px;
+
+  @include Phone {
+    font-size: 15px;
+  }
+
+  @include Tablet {
+    font-size: 20px;
+  }
+
+  @include Laptop {
+    font-size: 28px;
+  }
+}
+
+@mixin SizeSmall {
+  font-size: 22px;
+
+  @include Phone {
+    font-size: 11px;
+  }
+
+  @include Tablet {
+    font-size: 15px;
+  }
+
+  @include Laptop {
+    font-size: 18px;
+  }
+}

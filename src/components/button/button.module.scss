@@ -1,0 +1,29 @@
+@import "/src/styles/mixins/colors.scss";
+@import "/src/styles/mixins/fonts.scss";
+
+.button {
+  @include SizeSmall;
+  padding: 15px 50px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+
+  &.primary {
+    background-color: $green-color;
+    color: $white-color;
+  }
+
+  &.secundary {
+    background-color: $white-color;
+    color: $purple-color;
+  }
+
+  &.full {
+    @include SizeNormal;
+    padding: 21px;
+    width: 100%;
+    font-weight: 600;
+    background-color: $green3-color;
+    color: $white-color;
+  }
+}

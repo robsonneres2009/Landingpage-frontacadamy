@@ -1,0 +1,50 @@
+@import "/src/styles/mixins/colors.scss";
+@import "/src/styles/mixins/padding.scss";
+@import "/src/styles/mixins/responsive.scss";
+
+.container {
+  @include Padding; //Mixin
+  color: $white-color; //Variable
+  padding-top: 34px;
+  padding-bottom: 34px;
+  width: 100%;
+  background-color: $purple-color;
+  border-bottom: 0.5px solid $gray-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+
+  @include Phone {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  @include Tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.menu {
+  font-size: 22px;
+
+  a + a {
+    margin-left: 38.9px;
+  }
+
+  @include Phone {
+    display: none;
+  }
+}
+
+.action {
+  text-align: end;
+
+  @include Phone {
+    display: none;
+  }
+
+  @include Tablet {
+    display: none;
+  }
+}
